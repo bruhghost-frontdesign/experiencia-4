@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Cores do Brasil - Talentos do Brasil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <header class="header-bandeira">
+    <div class="bandeira-animada">
+        <img src="bandeira.jpg" alt="Bandeira do Brasil">
+    </div>
+</header>
+<div class="caixa-titulo">
+    <h1>Instituto Cores do Brasil</h1>
+    <p class="subtitulo">Projeto Talentos do Brasil - Incluir para Brilhar</p>
+</div>    
+    
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <button class="menu-btn verde" data-target="voluntario">Como se tornar voluntário</button>
+    <button class="menu-btn amarelo" data-target="doar">Como doar</button>
+    <button class="menu-btn azul" data-target="projetos">Nossos projetos</button>
+  </aside>
+
+  <main>
+    <section>
+        <h2>Quem Somos</h2>
+        <p>Somos o <strong>Instituto Cores do Brasil</strong> de Sorocaba/SP. Há 10 anos, trabalhamos pela inclusão social, criando oportunidades e valorizando as potencialidades de cada participante. Porque, para nós, cada cor carrega um talento único: Verde, Amarelo, Azul e Branco.</p>
+    </section>
+
+    <div id="box-voluntario" class="caixa-conteudo">
+        <h3>Seja um voluntário</h3>
+        <form id="form-voluntario">
+            <label>Nome completo:</label>
+            <input type="text" required placeholder="Nome completo">
+            <label>RG:</label>
+            <input type="text" required>
+            <label>E-mail:</label>
+            <input type="email" required placeholder="seu@email.com">
+            <label>Celular com DDD:</label>
+            <input type="tel" required placeholder="(15) 99999-9999">
+            <button type="submit" class="btn-enviar">Enviar cadastro</button>
+            <button type="button" class="btn-fechar" onclick="fecharCaixas()">Fechar</button>
+        </form>
+    </div>
+
+    <div id="box-doar" class="caixa-conteudo">
+        <h3>Como doar</h3>
+        <div class="dados-bancarios">
+            <p><strong>PIX:</strong> doacoes@coresdobrasil.org</p>
+            <p><strong>Conta:</strong> 1245-01</p>
+            <p><strong>Agência:</strong> 5674</p>
+            <p><strong>Nome:</strong> Instituto Cores do Brasil</p>
+        </div>
+        <button class="btn-fechar" onclick="fecharCaixas()">Fechar</button>
+    </div>
+
+    <div id="box-projetos" class="caixa-conteudo projeto-destaque">
+        <h3>🇧🇷 Projeto Talentos do Brasil - Incluir para Brilhar</h3>
+        <p class="destaque-frase">"Cada cor tem um talento. Verde, Amarelo, Azul e Branco, todos juntos."</p>
+        <img src="talentosbrasil.jpg" alt="Instituto Cores do Brasil" class="img-projeto img-cartaz">
+        <p style="margin-top:1.5rem;">Para <strong>pessoas com necessidades especiais</strong> Nosso instituto é um espaço de acolhimento e desenvolvimento para pessoas com deficiência intelectual, física, visual e pessoas com TEA, a partir dos 14 anos. Aqui, buscamos fortalecer as habilidades e potencialidades de cada participante, incentivando a autonomia, a independência e a geração de renda.</p>
+        <div class="oficinas-grid">
+            <div class="oficina verde"><h4>🌱 Oficina Verde</h4><p>Horta adaptada. Lucro dividido entre alunos.</p></div>
+            <div class="oficina amarela"><h4>🎨 Oficina Amarela</h4><p>Artesanato com braile e audiodescrição.</p></div>
+            <div class="oficina azul"><h4>💻 Oficina Azul</h4><p>Tecnologia e encaminhamento para emprego PCD.</p></div>
+        </div>
+        <div class="impacto"><span>👥 60 pessoas/ano</span><span>💼 Gratuito</span><span>♿ Acessível</span></div>
+        <button class="btn-enviar btn-inscricao" id="btn-inscrever-pcd">Quero participar</button>
+        <div id="form-pcd-box" style="display:none; margin-top:1.5rem; background:#f9f9f9; padding:1.5rem; border-radius:8px; border:2px solid #009739;">
+            <h4>Inscrição PCD</h4>
+            <form id="form-pcd">
+                <label>Nome do participante:</label><input type="text" required>
+                <label>Deficiência / necessidade:</label><input type="text" required placeholder="Ex: Visual, TEA...">
+                <label>Responsável:</label><input type="text" required>
+                <label>Contato:</label><input type="text" required>
+                <button type="submit" class="btn-enviar">Enviar inscrição</button>
+            </form>
+        </div>
+        <button class="btn-fechar" onclick="fecharCaixas()" style="margin-top:1rem;">Fechar</button>
+    </div>
+  </main>
+</div>
+
+<footer id="footer">
+    <p><strong>Instituto Cores do Brasil - Sorocaba/SP</strong></p>
+    <button class="trabalhe-btn-footer" id="btn-trabalhe-footer">Trabalhe Conosco</button>
+    <div id="box-trabalhe" class="caixa-trabalhe">
+        <h3>Trabalhe Conosco</h3>
+        <form id="form-trabalhe">
+            <label>Nome:</label><input type="text" required>
+            <label>CPF:</label><input type="text" required>
+            <label>E-mail:</label><input type="email" required>
+            <button type="submit" class="btn-enviar">Enviar</button>
+            <button type="button" class="btn-fechar" onclick="document.getElementById('box-trabalhe').style.display='none'">Fechar</button>
+        </form>
+    </div>
+    <p class="copy">&copy; 2025 Instituto Cores do Brasil</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

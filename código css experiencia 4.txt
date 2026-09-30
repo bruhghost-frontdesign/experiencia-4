@@ -1,0 +1,111 @@
+/* INSTITUTO CORES DO BRASIL - CSS OFICIAL CORRIGIDO */
+:root{
+  --verde:#009739;
+  --verde-escuro:#007a2e;
+  --verde-claro:#e6f4ea;
+  --amarelo:#FEDF00;
+  --amarelo-escuro:#d4ba00;
+  --amarelo-claro:#fff9c4;
+  --azul:#002776;
+  --azul-claro:#1a3a9c;
+  --azul-claro2:#e3f2fd;
+  --branco:#ffffff;
+  --preto:#212121;
+  --cinza:#f5f5f5;
+  --fonte:'Segoe UI', Arial, sans-serif;
+}
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:var(--fonte); background:var(--cinza); color:var(--preto); line-height:1.6;}
+header
+.header-bandeira{
+  position:relative;
+  overflow:hidden;
+  height:200px;
+  border-bottom:8px solid #FEDF00;
+}
+.bandeira-animada{
+  position:absolute;
+  top:-10%; left:-5%;
+  width:110%; height:120%;
+}
+.bandeira-animada img{
+  width:100%; height:100%;
+  object-fit:cover;
+  animation: ventando 4s ease-in-out infinite;
+}
+@keyframes ventando{
+  0%,100%{ transform: scaleX(1) skewY(0deg) scale(1.05); }
+  25%{ transform: scaleX(1.02) skewY(1.2deg) scale(1.05); }
+  50%{ transform: scaleX(0.99) skewY(-1deg) scale(1.05); }
+  75%{ transform: scaleX(1.01) skewY(0.8deg) scale(1.05); }
+}
+.caixa-titulo{
+  background:#009739;
+  color:#fff;
+  text-align:center;
+  padding:1.8rem 1rem;
+  border-bottom:8px solid #002776;
+}
+.caixa-titulo h1{
+  font-size:2.2rem;
+  font-weight:900;
+  letter-spacing:1px;
+  margin:0;
+}
+.caixa-titulo .subtitulo{
+  color:#FEDF00;
+  font-weight:800;
+  font-size:1.2rem;
+  margin-top:.5rem;
+}
+.logo-container{ display:none !important; }
+/* LOGO CORRIGIDA */
+.logo-container{width:90px; height:90px; background:var(--branco); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; border:4px solid var(--amarelo); overflow:visible; flex-shrink:0;}
+.heart{width:36px; height:36px; background:var(--azul); position:relative; display:block; flex-shrink:0; -webkit-transform:rotate(-45deg); transform:rotate(-45deg); margin-top:8px;}
+.heart::before,.heart::after{content:""; width:36px; height:36px; background:var(--azul); border-radius:50%; position:absolute; display:block;}
+.heart::before{top:-18px; left:0;}
+.heart::after{top:0; left:18px;}
+
+.layout{max-width:1200px; margin:2rem auto; display:flex; gap:1.5rem; padding:0 1rem;}
+.sidebar{width:260px; min-width:260px; background:var(--branco); padding:1.5rem; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,.08); height:fit-content; position:sticky; top:20px; border-top:6px solid var(--verde);}
+.sidebar h2{color:var(--azul); margin-bottom:1rem;}
+.menu-btn{width:100%; border:none; padding:.9rem; border-radius:8px; margin-bottom:.6rem; font-weight:700; cursor:pointer; text-align:left; transition:.2s; color:var(--branco);}
+.menu-btn.verde{background:var(--verde);}
+.menu-btn.amarelo{background:var(--amarelo); color:var(--azul);}
+.menu-btn.azul{background:var(--azul);}
+.menu-btn:hover{transform:translateX(4px); filter:brightness(1.1);}
+main{flex:1;}
+section{background:var(--branco); padding:2rem; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,.08); margin-bottom:1.5rem; border-left:5px solid var(--verde);}
+section h2{color:var(--azul); border-left:5px solid var(--amarelo); padding-left:.5rem; margin-bottom:1rem;}
+.caixa-conteudo{display:none; background:var(--branco); padding:2rem; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,.08); margin-bottom:1.5rem; border-left:6px solid var(--amarelo); border-top:4px solid var(--azul); animation:fadeIn .3s ease;}
+@keyframes fadeIn{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);}}
+.caixa-conteudo label,.caixa-trabalhe label{display:block; margin-top:1rem; font-weight:700; color:var(--azul);}
+.caixa-conteudo input,.caixa-trabalhe input{width:100%; padding:.7rem; border:1px solid #ccc; border-radius:6px; margin-top:4px; font-size:1rem;}
+.caixa-conteudo input:focus{outline:none; border-color:var(--azul); box-shadow:0 0 0 2px var(--azul-claro2);}
+.dados-bancarios{background:var(--verde-claro); border:2px dashed var(--verde); padding:1.5rem; border-radius:8px; margin:1rem 0;}
+.img-projeto{width:100%; border-radius:12px; margin-top:1rem; display:block; object-fit:cover;}
+.img-cartaz{border:3px solid var(--azul); box-shadow:0 8px 25px rgba(0,39,118,.2); max-height:none;}
+.projeto-destaque{border-left:6px solid var(--verde) !important;}
+.destaque-frase{background:var(--amarelo-claro); border-left:4px solid var(--amarelo); padding:.8rem; border-radius:6px; font-style:italic; font-weight:700; color:var(--azul); margin:1rem 0;}
+.oficinas-grid{display:grid; gap:1rem; margin:1.5rem 0;}
+.oficina{padding:1.2rem; border-radius:8px; border-left:5px solid;}
+.oficina.verde{background:var(--verde-claro); border-color:var(--verde);}
+.oficina.amarela{background:var(--amarelo-claro); border-color:var(--amarelo);}
+.oficina.azul{background:var(--azul-claro2); border-color:var(--azul);}
+.oficina h4{margin-bottom:.5rem; color:var(--azul);}
+.impacto{display:flex; gap:.8rem; flex-wrap:wrap; margin:1.5rem 0;}
+.impacto span{background:var(--cinza); padding:.5rem 1rem; border-radius:20px; font-size:.9rem; font-weight:700; border:1px solid #ddd;}
+.btn-enviar{width:100%; background:var(--azul); color:var(--branco); border:none; padding:.9rem; border-radius:6px; margin-top:1.5rem; font-weight:700; cursor:pointer; font-size:1rem; transition:.2s;}
+.btn-enviar:hover{filter:brightness(1.1);}
+.btn-inscricao{background:var(--verde) !important; font-size:1.15rem;}
+.btn-fechar{width:100%; background:transparent; border:1px solid #ccc; padding:.7rem; border-radius:6px; margin-top:.6rem; cursor:pointer;}
+#footer{background:var(--azul); color:var(--branco); text-align:center; padding:3rem 1rem; margin-top:4rem; border-top:8px solid var(--amarelo);}
+.trabalhe-btn-footer{margin-top:1rem; background:var(--amarelo); color:var(--azul); border:none; padding:.8rem 2rem; border-radius:30px; font-weight:800; cursor:pointer; transition:.2s;}
+.trabalhe-btn-footer:hover{transform:scale(1.05);}
+.caixa-trabalhe{display:none; background:var(--branco); color:var(--preto); max-width:450px; margin:2rem auto 0; padding:2rem; border-radius:12px; text-align:left; box-shadow:0 8px 25px rgba(0,0,0,.15);}
+.copy{margin-top:1.5rem; font-size:.875rem; opacity:.8;}
+
+/* GARANTIA MÃOZINHA */
+.menu-btn, .btn-enviar, .btn-fechar, .trabalhe-btn-footer{cursor:pointer !important;}
+
+@media(max-width:768px){.layout{flex-direction:column;} .sidebar{width:100%; min-width:100%; position:relative; top:0;}}
